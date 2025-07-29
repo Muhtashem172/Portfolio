@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --dark: #2D3748;
+            --light: #F7FAFC;
+            --accent: #4FD1C5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: var(--secondary);
+        }
+        
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+        
+        .project-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .project-header p {
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .project-description h2, .project-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-description h2:after, .project-info h2:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            bottom: 0;
+            left: 0;
+        }
+        
+        .project-description p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .info-item p {
+            color: #4a5568;
+        }
+        
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 40px;
+        }
+        
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .prev-btn {
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+        }
+        
+        .prev-btn i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .next-btn {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+        
+        .next-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .prev-btn:hover {
+            background: rgba(108, 99, 255, 0.2);
+        }
+        
+        .prev-btn:hover i {
+            transform: translateX(-5px);
+        }
+        
+        .next-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.4);
+        }
+        
+        .next-btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        
+        <div class="project-header">
+            <span class="project-category" id="project-category">Branding</span>
+            <h1 id="project-title">Project Title</h1>
+            <p id="project-description">Project description will appear here</p>
+        </div>
+        
+        <div class="project-gallery" id="project-gallery">
+            <!-- Images will be inserted here by JavaScript -->
+        </div>
+        
+        <div class="project-details">
+            <div class="project-description">
+                <h2>About This Project</h2>
+                <p id="project-about">Detailed description about the project will appear here.</p>
+                <p id="project-challenges">Challenges faced and solutions implemented.</p>
+            </div>
+            
+            <div class="project-info">
+                <h2>Project Information</h2>
+                <div class="info-item">
+                    <h3>Client</h3>
+                    <p id="project-client">Client Name</p>
+                </div>
+                <div class="info-item">
+                    <h3>Date</h3>
+                    <p id="project-date">January 2023</p>
+                </div>
+                <div class="info-item">
+                    <h3>Services</h3>
+                    <p id="project-services">Branding, Web Design</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools Used</h3>
+                    <p id="project-tools">Adobe Illustrator, Photoshop</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-nav">
+            <a href="#" class="nav-btn prev-btn" id="prev-project">
+                <i class="fas fa-arrow-left"></i> Previous Project
+            </a>
+            <a href="#" class="nav-btn next-btn" id="next-project">
+                Next Project <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Project data - replace with your actual projects
+        const projects = {
+            1: {
+                title: "EcoLife Brand Identity",
+                category: "Branding",
+                description: "Complete branding package for sustainable lifestyle brand",
+                about: "This project involved creating a comprehensive brand identity for EcoLife, a company dedicated to sustainable living. The challenge was to communicate their eco-friendly values while maintaining a modern, approachable aesthetic.",
+                challenges: "The main challenge was balancing the natural/organic elements with a clean, contemporary design that would appeal to both younger and older demographics.",
+                client: "EcoLife Inc.",
+                date: "March 2023",
+                services: "Brand Identity, Logo Design, Packaging",
+                tools: "Adobe Illustrator, Photoshop, Procreate",
+                images: [
+                    "image1.jpeg",
+                    "image2.jpeg",
+                    "image3.jpeg",
+                    "image4.jpeg"
+                ],
+                nextId: 2,
+                prevId: null
+            },
+            2: {
+                title: "TechSolutions Dashboard UI",
+                category: "Web Design",
+                description: "User interface design for SaaS analytics platform",
+                about: "Designed a comprehensive dashboard interface for TechSolutions' analytics platform, focusing on data visualization and user experience.",
+                challenges: "Presenting complex data in an easily digestible format while maintaining a clean, uncluttered interface was the primary challenge.",
+                client: "TechSolutions",
+                date: "January 2023",
+                services: "UI/UX Design, Prototyping",
+                tools: "Figma, Adobe XD, Illustrator",
+                images: [
+                    "image5.jpeg",
+                    "image6.jpeg",
+                    "image7.jpeg"
+                ],
+                nextId: 3,
+                prevId: 1
+            },
+            3: {
+                title: "Digital Art Series",
+                category: "Illustration",
+                description: "Collection of surreal digital illustrations",
+                about: "A personal project exploring surreal concepts through digital illustration, blending organic forms with geometric structures.",
+                challenges: "Creating cohesive pieces that maintained individual character while forming part of a unified series.",
+                client: "Personal Project",
+                date: "November 2022",
+                services: "Digital Illustration",
+                tools: "Procreate, Adobe Photoshop",
+                images: [
+                    "image8.jpeg",
+                    "image9.jpeg",
+                    "image10.jpeg",
+                    "image11.jpeg",
+                    "image1.jpeg"
+                ],
+                nextId: null,
+                prevId: 2
+            }
+            // Add more projects as needed
+        };
+
+        // Get project ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+        const currentProject = projects[projectId];
+
+        // Display project data
+        if (currentProject) {
+            document.getElementById('project-title').textContent = currentProject.title;
+            document.getElementById('project-category').textContent = currentProject.category;
+            document.getElementById('project-description').textContent = currentProject.description;
+            document.getElementById('project-about').textContent = currentProject.about;
+            document.getElementById('project-challenges').textContent = currentProject.challenges;
+            document.getElementById('project-client').textContent = currentProject.client;
+            document.getElementById('project-date').textContent = currentProject.date;
+            document.getElementById('project-services').textContent = currentProject.services;
+            document.getElementById('project-tools').textContent = currentProject.tools;
+
+            // Display images
+            const gallery = document.getElementById('project-gallery');
+            currentProject.images.forEach(image => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `<img src="${image}" alt="${currentProject.title}">`;
+                gallery.appendChild(galleryItem);
+            });
+
+            // Set up navigation buttons
+            if (currentProject.prevId) {
+                document.getElementById('prev-project').href = `project.html?id=${currentProject.prevId}`;
+            } else {
+                document.getElementById('prev-project').style.visibility = 'hidden';
+            }
+
+            if (currentProject.nextId) {
+                document.getElementById('next-project').href = `project.html?id=${currentProject.nextId}`;
+            } else {
+                document.getElementById('next-project').style.visibility = 'hidden';
+            }
+        } else {
+            // Project not found - redirect to portfolio
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
