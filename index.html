@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Designer Portfolio | Your Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Design<span>X</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transforming Ideas Into Visual Masterpieces</h1>
+            <p>I'm a passionate graphic designer dedicated to creating stunning visuals that tell your brand's story and captivate your audience.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Design Work">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know the creative mind behind these designs</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="image.jpeg" alt="Designer Photo">
+            </div>
+            <div class="about-text">
+                <h3>Creative Graphic Designer with 5+ Years Experience</h3>
+                <p>Hello! I'm Muhtashem Naveed, a passionate graphic designer specializing in branding, web design, and digital illustrations. With a keen eye for detail and a love for clean, impactful designs, I help businesses communicate their message effectively through visual storytelling.</p>
+                <p>My approach combines strategic thinking with artistic expression to create designs that not only look beautiful but also serve their purpose effectively.</p>
+                
+                <div class="skills">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Brand Identity</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Logo Design</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Illustration</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Motion Graphics</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="section-title">
+            <h2>My Portfolio</h2>
+            <p>A collection of my recent design projects</p>
+        </div>
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="illustration">Illustration</button>
+            <button class="filter-btn" data-filter="print">Print</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="branding">
+                <img src="image1.jpeg" alt="Branding Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>EcoLife Brand Identity</h3>
+                    <p>Complete branding package for sustainable lifestyle brand</p>
+                    <a href="project.html?id=1" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="web">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D3D&auto=format&fit=crop&w=1528&q=80" alt="Web Design Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>TechSolutions Dashboard UI</h3>
+                    <p>User interface design for SaaS analytics platform</p>
+                   <a href="project.html?id=2" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="illustration">
+                <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Illustration Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Digital Art Series</h3>
+                    <p>Collection of surreal digital illustrations</p>
+                   <a href="project.html?id=3" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="print">
+                <img src="image12.jpeg" alt="Print Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Food Festival Brochure</h3>
+                    <p>Print design for annual culinary event</p>
+                   <a href="project.html?id=1" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="branding">
+                <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Branding Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>BrewCraft Logo Design</h3>
+                    <p>Logo and visual identity for craft brewery</p>
+                   <a href="project.html?id=2" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="web">
+                <img src="image6.jpeg" alt="Web Design Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Travel App Interface</h3>
+                    <p>Mobile app UI/UX for adventure travel company</p>
+                    <a href="project.html?id=3" class="portfolio-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-title">
+            <h2>My Services</h2>
+            <p>Comprehensive design solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Brand Identity</h3>
+                <p>Create a memorable visual identity with custom logos, color palettes, typography, and brand guidelines that communicate your unique value.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Logo Design</h3>
+                <p>User-centered digital experiences with intuitive interfaces, seamless navigation, and engaging interactions that drive conversions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h3>Print Design</h3>
+                <p>Stunning business cards, brochures, packaging, and other print materials that make a lasting impression.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Illustration</h3>
+                <p>Custom illustrations and icons that bring your content to life with personality and visual appeal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-photo-video"></i>
+                </div>
+                <h3>Motion Graphics</h3>
+                <p>Animated logos, explainer videos, and social media content that captures attention and tells your story.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <h3>Design Consulting</h3>
+                <p>Expert advice on design strategy, visual communication, and creative direction for your projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="section-title">
+            <h2>Client Testimonials</h2>
+            <p>What my clients say about my work</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="client-img">
+                <p class="testimonial-text">"Working with Jane was an absolute pleasure. She took our vague ideas and transformed them into a stunning brand identity that perfectly captures our company's values. The attention to detail and creative vision exceeded all our expectations."</p>
+                <div class="client-info">
+                    <h4>Sarah Johnson</h4>
+                    <p>CEO, EcoLife</p>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img">
+                <p class="testimonial-text">"The UI design Jane created for our app has significantly improved user engagement. Her understanding of user psychology combined with beautiful aesthetics resulted in a product that our customers love to use every day."</p>
+                <div class="client-info">
+                    <h4>Michael Chen</h4>
+                    <p>Product Manager, TechSolutions</p>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="client-img">
+                <p class="testimonial-text">"We've worked with many designers over the years, but Jane stands out for her professionalism, creativity, and ability to deliver on time. The packaging designs she created helped our products fly off the shelves."</p>
+                <div class="client-info">
+                    <h4>Emma Rodriguez</h4>
+                    <p>Marketing Director, FreshGoods</p>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <div class="testimonial-dot active" data-slide="0"></div>
+                <div class="testimonial-dot" data-slide="1"></div>
+                <div class="testimonial-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's collaborate on your next design project</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Talk About Your Project</h3>
+                <p>I'm currently available for freelance work and would love to discuss how I can help bring your creative vision to life. Feel free to reach out through any of the channels below.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:muthashem6580@gamil.com">muthashem6580@gamil.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                           <a href="https://wa.me/923126380955" target="_blank">+92 312 6380955</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                     <a href="https://pin.it/7tGJSQlJa" target="_blank" class="social-link"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.facebook.com/share/16sGuMahZt/" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/art_by_muhtashem?igsh=d3k2c294eGtkcWYw" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/@art_by_muhtashem" target="_blank" class="social-link">
+                  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="Threads Logo" style="width:24px; height:24px;">
+                </a>
+
+                </div>
+            </div>
+<div class="contact-form">
+    <form action="https://formsubmit.co/Muhtashem75@gmail.com" method="POST">
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="subject" class="form-control" placeholder="Subject">
+        </div>
+        <div class="form-group">
+            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">Design<span>X</span></a>
+            <p>Creating meaningful designs that inspire and engage</p>
+            
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="footer-social">
+                <a href="https://pin.it/7tGJSQlJa" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.facebook.com/share/16sGuMahZt/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/art_by_muhtashem?igsh=d3k2c294eGtkcWYw" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/@art_by_muhtashem" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="Threads Logo" style="width:24px; height:24px;">
+                </a>
+
+
+
+            </div>
+            
+            <p class="copyright">© 2023 DesignX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
